@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/base.css')}}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="title row justify-content-around">
+        <h1 class="text-center text-warning">$Bull$ & $Bear$</h1>
+    </div>
+
+    <nav class="nav bg-dark d-flex justify-content-around">
+        <a href="{{ url_for('index') }}" class="link-light">Home</a>
+        <a href="#" class="link-light">My Investments</a>
+
+        {% if current_user.is_authenticated%}
+        <a href="#" class="link-light">Add Investment</a>
+        <a href="{{ url_for('logout') }}" class="link-light">Log Out</a>
+        
+        {% else %}
+        <a href="{{ url_for('signup') }}" class="link-light">Sign Up</a>
+        
+        <a href="{{ url_for('login') }}" class="link-light">Log In</a>
+        {% endif %}
+    </nav>
+
+    <div class="container">
+
+        {% include 'alert_message.html' %}
+
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
