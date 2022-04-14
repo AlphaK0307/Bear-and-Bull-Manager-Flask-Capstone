@@ -14,28 +14,28 @@ body{
     align-items: center;
 }
 
-nav li{
+.nav li{
     display: inline;
     margin: 20px
 }
 
-nav{
+.nav{
     display:block;
     color:red;
     font-size: large; 
 }
-nav ul{
+.nav ul{
     background-color: #2b2b2b;
     margin: 0;
     list-style-type:none;
     width: 100%;
     padding: 10px;
 }
-nav a{
-    color: green;
+.nav a{
+    color: rgb(96, 205, 96);
     text-decoration: none;
 }
-nav a:hover{
+.nav a:hover{
     border-bottom:0.01cm solid white;
     border-top:0.01cm solid white;
     border-left:0.01cm solid white;
