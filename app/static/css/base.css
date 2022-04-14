@@ -14,11 +14,6 @@ body{
     align-items: center;
 }
 
-.nav li{
-    display: inline;
-    margin: 20px
-}
-
 .nav{
     display:block;
     color:red;
@@ -27,9 +22,8 @@ body{
 .nav ul{
     background-color: #2b2b2b;
     margin: 0;
-    list-style-type:none;
     width: 100%;
-    padding: 10px;
+    padding: 0px;
 }
 .nav a{
     color: rgb(96, 205, 96);
@@ -87,4 +81,45 @@ body{
   .grid-image{
     background-color: #ffffff;
     top: 0;
+}
+.flex-container3 {
+    display: flex;
+    justify-content: space-around;
+    size: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.grid-container3 {  display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column dense;
+    justify-content: space-between;
+    justify-items: start;
+    align-items: center;
+    grid-template-areas:
+      ". .";
+    width: 90%;
+    height: 90%;
+    background-color: purple;
+    border-radius: 18px;
+}
+
+.grid-text3{
+    text-align: center;
+    color:#ffffff;
+    margin: 10%;
+  }
+
+footer{
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    margin-top: 0px;
+    text-align: center;
+    color: green;
+    border: 0px;
 }

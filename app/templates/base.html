@@ -12,9 +12,9 @@
 </head>
 <body>
     <div class="title row justify-content-around">
-        <h1 class="bg-dark text-center text-warning">$Bull$ & $Bear$</h1>
+        <h1 class="bg-dark text-center text-success">$Bull$ & $Bear$</h1>
     </div>
-    <nav class="nav bg-dark d-flex justify-content-around">
+    <nav class="nav bg-dark d-flex text-success justify-content-around">
         <a href="{{ url_for('index') }}" class="link-light">Home</a>
         <a href="#" class="link-light">My Investments</a>
 
@@ -23,9 +23,11 @@
         <a href="{{ url_for('logout') }}" class="link-light">Log Out</a>
         
         {% else %}
-        <a href="{{ url_for('signup') }}" class="link-light">Sign Up</a>
+        <!-- <button><a href="{{ url_for('signup') }}" > Sign Up</button>
+        <button>Sign In</button> -->
+        <a href="{{ url_for('signup') }}" class="btn btn-primary">Sign Up</a>
         
-        <a href="{{ url_for('login') }}" class="link-light">Log In</a>
+        <a href="{{ url_for('login') }}" class="btn btn-primary link-light">Log In</a>
         {% endif %}
     </nav>
 
@@ -38,6 +40,13 @@
         {% endblock content %}
 
     </div>
+
+    <footer>
+        <hr>
+        <div>
+            &copy Keyur 2022
+        </div>
+    </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
