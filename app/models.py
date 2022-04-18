@@ -10,14 +10,11 @@ def get_user(user_id):
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    first_name= db.Column (db.String(50))
-    last_name= db.Column (db.String(50))
     username= db.Column (db.String(50), unique= True, nullable=False)
     email= db.Column (db.String(50), unique= True, nullable=False)
     password= db.Column (db.String(256), nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    posts = db.relationship('Post', backref='author', lazy='dynamic')
-    phones = db.relationship('Phone', backref='user', lazy='dynamic')
+    
 
 
     def __init__(self, **kwargs):

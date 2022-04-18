@@ -123,3 +123,10 @@ footer{
     color: green;
     border: 0px;
 }
+
+.container{
+    border-bottom:5px solid black;
+    border-top:5px solid black;
+    border-right:5px solid black;
+    border-left:5px solid black;
+}

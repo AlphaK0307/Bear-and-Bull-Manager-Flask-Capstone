@@ -1,19 +1,22 @@
 {% extends 'base.html' %}
-
+{%block css%}
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/login.css')}}">
+{% endblock css %}
 {%block content%}
 
-    <h1>Log In</h1>
     <form method="post">
         {{ form.csrf_token}}
+        <div class="container">
+            <h1 class="text-center">Log In</h1>
+            <div class="form-group">
+                {{form.username.label}}
+                {{form.username(class='form-control', placeholder='Username')}}
 
-        <div class="form-group">
-            {{form.username.label}}
-            {{form.username(class='form-control', placeholder='Username')}}
+                {{form.password.label}}
+                {{form.password(class='form-control', placeholder='Password')}}
 
-            {{form.password.label}}
-            {{form.password(class='form-control', placeholder='Password')}}
-
-            {{form.submit(class='btn btn-primary w-100')}}
-        </div> 
+                {{form.submit(class='btn btn-primary w-100')}}
+            </div> 
+        </div>
     </form>
 {%endblock content%}

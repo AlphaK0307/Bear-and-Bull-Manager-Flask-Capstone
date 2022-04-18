@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename= 'css/base.css')}}">
+    <!-- {% block css %}
+    {% endblock css %} -->
     <title>{{ title }}</title>
 </head>
 <body>
-    <div class="title row justify-content-around">
-        <h1 class="bg-dark text-center text-success">$Bull$ & $Bear$</h1>
+    <div class="title row bg-dark justify-content-around">
+        <h1 class=" text-center text-success">$Bull$ & $Bear$</h1>
     </div>
     <nav class="nav bg-dark d-flex text-success justify-content-around">
         <a href="{{ url_for('index') }}" class="link-light">Home</a>
