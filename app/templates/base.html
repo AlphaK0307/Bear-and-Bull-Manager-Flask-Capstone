@@ -13,10 +13,13 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <div class="row bg-dark ">
-        <h1 class=" text-success"><img src="{{url_for('static', filename= 'images/bb.png')}}" height="20%"></h1>
-    </div>
+    <!-- <div class="row bg-dark ">
+        <img class="d-block mx-auto" src="{{url_for('static', filename= 'images/bb.png')}}">
+    </div> -->
     <nav class="nav bg-dark d-flex text-success justify-content-around">
+        <span class="navbar-brand col-2">
+            <img class="img-fluid-nav" src="{{url_for('static', filename= 'images/bb.png')}}">
+        </span>
         <a href="{{ url_for('index') }}" class="link-light">Home</a>
         <a href="#" class="link-light">My Investments</a>
 

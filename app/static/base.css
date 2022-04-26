@@ -7,6 +7,11 @@ body{
     background-color: rgb(193, 228, 231);
 }
 
+.img-fluid-nav{
+    max-height: 90%;
+    width: 40%;
+}
+
 .main{
     background-color: black;
     font-size: x-large;

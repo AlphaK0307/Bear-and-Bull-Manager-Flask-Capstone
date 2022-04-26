@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+    <h1>Sign Up</h1>
+    <form method="post">
+        {{form.csrf_token}}
+        <div class="form-group">
+            <!-- <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" placeholder="Email"> -->
+            {{form.email.label}}
+            {{form.email(class='form-control', placeholder='Email')}}
+
+
+            {{form.username.label}}
+            {{form.username(class='form-control', placeholder='Username')}}
+            <!-- <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" placeholder="Username"> -->
+
+
+            {{form.password.label}}
+            {{form.password(class='form-control', placeholder='Password')}}
+            <!-- <label for="Password">Password</label>
+            <input type="text" name="Password" class="form-control" placeholder="Password"> -->
+
+            {{form.confirm_pass.label}}
+            {{form.confirm_pass(class='form-control', placeholder='Confirm Password')}}
+            <!-- <label for="confirmPass">Confirm Password</label>
+            <input type="text" name="confirmPass" class="form-control" placeholder="Confirm Password"> -->
+            
+            {{form.submit(class='btn btn-primary w-100')}}
+        </div> 
+    </form>
+{%endblock content%}

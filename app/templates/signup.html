@@ -3,7 +3,7 @@
 {%block content%}
 
     <div class="login-container">
-        <form action="" class="form-login">
+        <form action="" class="form-login" method="post">
             <ul class="login-nav">
                 
                 <li class="login-nav__item">
@@ -21,8 +21,8 @@
                 {{form.password.label}}
                 {{form.password(class='form-control', placeholder='Password')}}
 
-                {{form.password.label}}
-                {{form.password(class='form-control', placeholder='Confirm Password')}}
+                {{form.confirm_pass.label}}
+                {{form.confirm_pass(class='form-control', placeholder='Confirm Password')}}
 
                 {{form.submit(class='btn btn-primary w-100')}}
             </div>
