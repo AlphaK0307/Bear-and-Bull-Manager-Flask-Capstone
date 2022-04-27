@@ -8,12 +8,13 @@
     {% endif %}
     {% if current_user.is_authenticated%}
 
-
+    
     <div class="row">
         
         {% for t in trades %}
             <div class="col-12 col-md-4">
                 <div class="card" style="width: 18rem;">
+                    
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ t.ticker }}</h5>
                         <p class="card-text">Option:s {{t.no_of_contracts }}</p>
@@ -26,5 +27,21 @@
         {% endfor %}
     </div>
     {% endif %}
+    <!-- Card -->
+    <div class="bg-image card shadow-1-strong" style="background-image: url('https://www.wealthandfinance-news.com/wp-content/uploads/2019/09/stocks.jpg');">
+    <div class="card-body text-white">
+    {% for t in trades %}
+    <h5 class="card-title">{{ t.ticker }}</h5>
+    <div class="card-body text-center">
+        <h5 class="card-title">{{ t.ticker }}</h5>
+        <p class="card-text">Options: {{t.no_of_contracts }}</p>
+        <p class="card-text">Price: {{t.price}}</p>
+        <h4 class="card-text">Total: {{t.total}}</h4>
+    </div>
+    {% endfor %}
+    <a href="#!" class="btn btn-outline-light">Button</a>
+    </div>
+    </div>
+<!-- Card -->
 
 {%endblock content%}
