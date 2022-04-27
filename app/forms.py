@@ -15,3 +15,9 @@ class LoginForm(FlaskForm):
     username= StringField('Username', validators=[DataRequired()])
     password= PasswordField('Password', validators=[DataRequired()])
     submit= SubmitField('Log In')
+
+class TradeForm(FlaskForm):
+    ticker = StringField('Stock Ticker', validators=[DataRequired()])
+    no_of_contracts = StringField('No. Of Contracts', validators=[DataRequired()])
+    price = StringField('Price', validators=[DataRequired()])
+    submit = SubmitField('Submit')

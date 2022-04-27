@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%block content%}
+    {% if current_user.is_authenticated %}
+    <h1>Hello {{ current_user.username }}</h1>
+    {% else %}
+    <h1>Hello Please sign up to use our Porfolio Manager</h1>
+    {% endif %}
+    {% if current_user.is_authenticated%}
+
+    {{total}}
+    
+    <div class="row">
+        
+        {% for t in trades %}
+            <div class="col-12 col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ t.ticker }}</h5>
+                        <p class="card-text">{{t.no_of_contracts }}</p>
+                        <p class="card-text">{{t.price}}</p>
+                        <h4 class="card-text">{{t.total}}</h4>
+                    </div>
+                </div>
+            </div>
+            
+        {% endfor %}
+    </div>
+    {% endif %}
+
+{%endblock content%}

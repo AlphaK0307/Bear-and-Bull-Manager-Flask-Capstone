@@ -14,9 +14,8 @@ class User(db.Model, UserMixin):
     email= db.Column (db.String(50), unique= True, nullable=False)
     password= db.Column (db.String(256), nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    trades=db.relationship('Trade', backref='shareholder', lazy=True)
     
-
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.password = generate_password_hash(kwargs['password'])
@@ -31,3 +30,24 @@ class User(db.Model, UserMixin):
     
     def check_password(self, password):
         return check_password_hash(self.password, password)
+
+class Trade(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    ticker = db.Column(db.String(50), nullable=False)
+    no_of_contracts = db.Column(db.String(50), nullable=False)
+    price = db.Column(db.String(50), nullable=False)
+    total = db.Column(db.String(50), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        db.session.add(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return f"<Item|{self.ticker}>"
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()

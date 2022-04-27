@@ -2,8 +2,8 @@ from crypt import methods
 from app import app
 from flask import redirect, render_template, url_for, flash
 from flask_login import login_required, login_user, logout_user, current_user
-from app.forms import SignUpForm, LoginForm
-from app.models import User
+from app.forms import SignUpForm, LoginForm, TradeForm
+from app.models import User, Trade
 
 @app.route('/')
 def index():
@@ -57,3 +57,29 @@ def logout():
     logout_user()
     flash(f'You have logged out', 'primary')
     return redirect(url_for('index'))
+
+
+@app.route('/trade', methods=['GET', 'POST'])
+@login_required
+def trade():
+    title = 'Your Trades'
+    form = TradeForm()
+    trade=Trade.query.all()
+    if form.validate_on_submit():
+        ticker=form.ticker.data
+        no_of_contracts=form.no_of_contracts.data
+        price=form.price.data
+        total= int(price)*int(no_of_contracts)
+        Trade(ticker=ticker,user_id=current_user.id, no_of_contracts=no_of_contracts,total=total, price=price)
+        flash(f'New Trade has been entered', 'primary')
+        return redirect(url_for('trade'))
+    return render_template('trade.html',form=form, title=title)
+
+@app.route('/my_investment', methods=['GET', 'POST'])
+@login_required
+def my_investment():
+    title = 'My Investments'
+    trades = current_user.trades
+    # trade = Trade.query.filter_by(user_id=current_user.id)
+    total = sum(float(x.total) for x in trades)
+    return render_template('my_investment.html', title=title,trades=trades,total=total)

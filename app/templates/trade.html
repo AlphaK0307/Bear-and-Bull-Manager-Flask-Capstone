@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Enter a Trade</h1>
+<form method="post" enctype="multipart/form-data" >
+    {{ form.csrf_token }}
+    <div class="form-group">
+        {{ form.ticker.label }}
+        {{ form.ticker(class='form-control', placeholder='Stock Ticker') }}
+
+        {{ form.no_of_contracts.label }}
+        {{ form.no_of_contracts(class='form-control', placeholder='No. of Contracts') }}
+
+        {{ form.price.label }}
+        {{ form.price(class='form-control', placeholder='Cost of Contract, without $ sign') }}
+
+        {{ form.submit(class='btn btn-primary w-100') }}
+    </div>
+</form>
+
+
+{% endblock content %}
