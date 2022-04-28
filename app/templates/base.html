@@ -45,6 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a href="{{ url_for('index') }}" class="nav-item nav-link text-success active">Home</a>
+                    
                     <a href="{{ url_for('my_investment') }}" class="nav-item nav-link text-success">My Investments</a>
                     {% if current_user.is_authenticated%}
                     <a href="{{ url_for('trade') }}" class="nav-item nav-link text-success">Add Investment</a>
@@ -53,7 +54,7 @@
         
                     {% else %}
                 <div class="navbar-nav ms-auto">
-                    <a href="#" class="nav-item nav-link text-success">Login</a>
+                    <a href="{{ url_for('login') }}" class="nav-item nav-link text-success">Login</a>
                 </div>
                     {% endif %}
                 
