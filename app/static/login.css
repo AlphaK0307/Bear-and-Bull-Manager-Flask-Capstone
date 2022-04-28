@@ -1,7 +1,5 @@
 
-
 body {
-	background-color:aqua;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	line-height: 1.25;
@@ -22,11 +20,15 @@ body {
 	width: 100%;
 	max-width: 100%;
 	min-height: 100%;
-	background-image: url(https://media.istockphoto.com/vectors/bull-market-vs-bear-market-vector-id1209381154?k=20&m=1209381154&s=612x612&w=0&h=t5aU1LgkUSZNcU0hNf7V1cWlB3ub2LwWk1HSRl5tjlI=);
+	background-image: url(https://g.foolcdn.com/editorial/images/655498/bull-vs-bear-getty.jpg);
+	background-size: stretch;
+	background-repeat: no-repeat;
+	background-position: center;
 	box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
 }
 
 .login-container:after {
+	background: transparent;
 	content: '';
 	display: inline-block;
 	position: absolute;
@@ -35,8 +37,8 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: radial-gradient(ellipse at left bottom, rgb(22, 47, 28) 0%,rgba(104, 159, 101, 0.9) 59%, rgba(91, 190, 55, 0.9) 100%);
-	box-shadow: 0 -20px 150px -20px rgba(53, 206, 45, 0.5);
+	background-image: radial-gradient(ellipse at left bottom, rgba(22, 47, 28, 0.659) 0%,rgba(104, 159, 101, 0.368) 59%, rgba(91, 190, 55, 0.281) 100%);
+	box-shadow: 0 -20px 150px -20px rgba(0, 5, 0, 0);
 }
 
 .form-login {
@@ -54,7 +56,9 @@ body {
 
 .login-nav__item {
 	list-style: none;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	background: transparent;
 }
 
 .login-nav__item + .login-nav__item {
@@ -62,19 +66,19 @@ body {
 }
 
 .login-nav__item a {
-	position: relative;
-	color: #ffffffc4;
-	text-decoration: none;
+	position:fixed;
+	color: rgba(176, 14, 14, 0.754);
+	text-decoration:dashed;
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 1.25rem;
+	font-size: 50px;
 	padding-bottom: .5rem;
 	transition: .20s all ease;
 }
 
 .login-nav__item.active a,
 .login-nav__item a:hover{
-	color: #ffffffc4;
+	color: #db1414c4;
 	transition: .15s all ease;
 }
 
@@ -82,7 +86,7 @@ body {
 	content: '';
   display: inline-block;
   height: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(219, 21, 21);
   position: absolute;
   right: 100%;
   bottom: -1px;
@@ -91,7 +95,7 @@ body {
   transition: .15s all ease;
 }
 
-.login-nav__item a:hover:after,
+/* .login-nav__item a:hover:after,
 .login-nav__item.active a:after{
 	background-color: rgb(237, 94, 17);
 	height: 2px;
@@ -99,17 +103,17 @@ body {
 	bottom: 2px;
 	border-radius: 0;
 	transition: .20s all ease;
-}
+} */
 .login__label {
 	display: block;
 	padding-left: 1rem;
 }
 
-.login__label,
-.login__label--checkbox {
-	color: rgba(255, 255, 255, 0.5);
+.login__label {
+	color: rgba(7, 1, 1, 0.903);
+	background-color: rgba(223, 201, 201, 0.252);
 	text-transform: uppercase;
-	font-size: .75rem;
+	font-size: 1.00rem;
 	margin-bottom: 1rem;
 }
 
@@ -132,7 +136,7 @@ body {
 	border: 2px solid transparent;
 	outline: none;
 	border-radius: 1.5rem;
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: rgba(255, 255, 255, 0.144);
 	letter-spacing: 1px;
 }
 

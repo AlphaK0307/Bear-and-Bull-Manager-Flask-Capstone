@@ -34,7 +34,7 @@ def signup():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    title= 'Login In'
+    title= 'Login'
     form=  LoginForm()
     if form.validate_on_submit():
         username = form.username.data
