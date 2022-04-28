@@ -58,6 +58,10 @@ def logout():
     flash(f'You have logged out', 'primary')
     return redirect(url_for('index'))
 
+@app.route('/news')
+def news():
+    title='News'
+    return render_template('news.html', title=title)
 
 @app.route('/trade', methods=['GET', 'POST'])
 @login_required

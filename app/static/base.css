@@ -1,11 +1,10 @@
 body, html {
     height: 100%;
     margin: 0px;
+    background-color: aqua;
 }
 
-body{
-    background-color: rgb(193, 228, 231);
-}
+
 
 .img-fluid-nav{
     max-height: 90%;
@@ -95,6 +94,13 @@ body{
     margin-bottom: 100px;
 }
 
+.pltatform{
+    background-color: purple;
+    color: white;
+    border-radius: 18px;
+    
+}
+
 .grid-container3 {  display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-rows: 1fr;
@@ -148,9 +154,9 @@ footer{
   }
 .box { margin: 20px; }
 .box1 { 
-    background-color: rgb(82, 184, 82); 
+    background-color: rgb(222, 47, 231); 
     color: aqua;
 }
 .box2 { background-color: black; }
 .box3 { background-color: rgb(29, 144, 29);; }
-.box4 { background-color: rgb(37, 37, 174); }
+.box4 { background-color: purple }
