@@ -7,24 +7,31 @@
             <ul class="login-nav">
                 
                 <li class="login-nav__item">
-                    <a href="#">Log In</a>
+                    <a href="#">Sign Up</a>
                 </li>
             </ul>
             {{form.csrf_token}}
+            <label for="login-input-user" class="login__label">
                 {{form.email.label}}
                 {{form.email(class='form-control', placeholder='Email')}}
+            </label>
 
-
+            <label for="login-input-user" class="login__label">
                 {{form.username.label}}
                 {{form.username(class='form-control', placeholder='Username')}}
-              
+            </label>
+
+             <label for="login-input-user" class="login__label">
                 {{form.password.label}}
                 {{form.password(class='form-control', placeholder='Password')}}
+            </label>
 
+            <label for="login-input-user" class="login__label">
                 {{form.confirm_pass.label}}
                 {{form.confirm_pass(class='form-control', placeholder='Confirm Password')}}
+            </label>
 
-                {{form.submit(class='btn btn-primary w-100')}}
+                {{form.submit(class='btn btn-danger w-100')}}
             </div>
         </form>
     </div>
