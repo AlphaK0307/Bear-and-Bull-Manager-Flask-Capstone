@@ -55,7 +55,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    flash(f'You have logged out', 'primary')
+    flash(f'You have logged out', 'danger')
     return redirect(url_for('index'))
 
 @app.route('/news')
@@ -75,7 +75,7 @@ def trade():
         price=form.price.data
         total= int(price)*int(no_of_contracts)
         Trade(ticker=ticker,user_id=current_user.id, no_of_contracts=no_of_contracts,total=total, price=price)
-        flash(f'New Trade has been entered', 'primary')
+        flash(f'New Trade has been entered', 'success')
         return redirect(url_for('trade'))
     return render_template('trade.html',form=form, title=title)
 

@@ -2,7 +2,7 @@
 
 {%block content%}
     {% if current_user.is_authenticated %}
-    <h1>Total Investments: ${{total}}</h1>
+    <h1 class="text-warning">Total Investments: ${{total}}</h1>
     {% else %}
     <h1>Hello Please sign up to use our Porfolio Manager</h1>
     {% endif %}

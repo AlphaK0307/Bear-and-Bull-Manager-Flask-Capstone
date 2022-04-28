@@ -45,7 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a href="{{ url_for('index') }}" class="nav-item nav-link text-success active">Home</a>
-                    <a href="{{ url_for('news') }}" class="nav-item nav-link text-success active">News</a>
+                    <a href="{{ url_for('news') }}" class="nav-item nav-link text-success active">Live News</a>
                     
                     <a href="{{ url_for('my_investment') }}" class="nav-item nav-link text-success">My Investments</a>
                     {% if current_user.is_authenticated%}
@@ -55,6 +55,7 @@
         
                     {% else %}
                 <div class="navbar-nav ms-auto">
+                    <a href="{{ url_for('login') }}" class="nav-item nav-link text-success">Signup</a>
                     <a href="{{ url_for('login') }}" class="nav-item nav-link text-success">Login</a>
                 </div>
                     {% endif %}
@@ -96,12 +97,6 @@
 
     </div>
 
-    <footer>
-        <hr>
-        <div>
-            &copy Keyur 2022
-        </div>
-    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>

@@ -1,7 +1,9 @@
 body, html {
     height: 100%;
     margin: 0px;
+    font-family: 'Montserrat', Arial;
     background-color: aqua;
+    background-image: url("https://wallpaperaccess.com/full/2847970.jpg");
 }
 
 
@@ -98,7 +100,12 @@ body, html {
     background-color: purple;
     color: white;
     border-radius: 18px;
-    
+}
+
+.news{
+    background-color: purple;
+    color: white;
+    border-radius: 18px;
 }
 
 .grid-container3 {  display: grid;
