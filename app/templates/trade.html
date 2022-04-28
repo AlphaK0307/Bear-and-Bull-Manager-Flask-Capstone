@@ -2,22 +2,34 @@
 
 
 {% block content %}
-<h1>Enter a Trade</h1>
-<form method="post" enctype="multipart/form-data" >
-    {{ form.csrf_token }}
-    <div class="form-group">
-        {{ form.ticker.label }}
-        {{ form.ticker(class='form-control', placeholder='Stock Ticker') }}
 
-        {{ form.no_of_contracts.label }}
-        {{ form.no_of_contracts(class='form-control', placeholder='No. of Contracts') }}
+<div class="login-box">
 
-        {{ form.price.label }}
-        {{ form.price(class='form-control', placeholder='Cost of Contract, without $ sign') }}
+    <form method="post" enctype="multipart/form-data" >
+        {{ form.csrf_token }}
+        <div class="form-group">
+            <h2>Enter a Trade</h2>
+            
+            <div class="user-box">
+                
+                {{ form.ticker.label }}
+                {{ form.ticker(class='form-control', placeholder='Stock Ticker') }}
+            </div>
 
-        {{ form.submit(class='btn btn-primary w-100') }}
-    </div>
-</form>
+            <div class="user-box">
+                {{ form.no_of_contracts.label }}
+                {{ form.no_of_contracts(class='form-control', placeholder='No. of Contracts') }}
+            </div>
+    
+            <div class="user-box">
+                {{ form.price.label }}
+                {{ form.price(class='form-control', placeholder='Cost of Contract, without $ sign') }}
+            </div>
+    
+            {{ form.submit(class='btn btn-primary w-100') }}
+        </div>
+    </form>
+</div>
 
 
 {% endblock content %}

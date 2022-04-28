@@ -73,7 +73,7 @@ def trade():
         ticker=form.ticker.data
         no_of_contracts=form.no_of_contracts.data
         price=form.price.data
-        total= int(price)*int(no_of_contracts)
+        total= float(price)*float(no_of_contracts)
         Trade(ticker=ticker,user_id=current_user.id, no_of_contracts=no_of_contracts,total=total, price=price)
         flash(f'New Trade has been entered', 'success')
         return redirect(url_for('trade'))
