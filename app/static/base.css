@@ -6,7 +6,11 @@ body, html {
     background-image: url("https://wallpaperaccess.com/full/2847970.jpg");
 }
 
-
+.header{
+    background-color: #2b2b2b;
+    color: aqua;
+    text-align: center;
+}
 
 .img-fluid-nav{
     max-height: 90%;
