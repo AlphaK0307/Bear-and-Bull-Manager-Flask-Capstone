@@ -6,5 +6,5 @@ This Manager helps you keep track of your positions and profits
 
 Along with it. that helps you fetch live news from Youtube
 
-Join My FREE Discord server to get my stock Signals: https://discord.gg/a6NW22Md 
+Join My FREE Discord server to get my stock Signals: https://discord.gg/a6NW22Md along with 2 of my experienced traders.
 
