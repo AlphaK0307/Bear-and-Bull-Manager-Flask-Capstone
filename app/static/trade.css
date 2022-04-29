@@ -5,9 +5,9 @@
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.902);
+    background: rgba(46, 187, 69, 0.7);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.846);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.892);
     border-radius: 10px;
   }
   
