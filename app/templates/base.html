@@ -14,59 +14,40 @@
     <title>Bull & Bear | {{ title }}</title>
 </head>
 <body>
-    <div class="header">
+
+    <div class="header bg-dark">
         <h1><img src="{{url_for('static', filename= 'images/bull.jpg')}}" height="50" alt="CoolBrand"/> Bull & Bear <img src="{{url_for('static', filename= 'images/beaar.jpeg')}}" height="50" alt="CoolBrand"/></h1>
-    </div>
-    <!-- <div class="row bg-dark ">
-        <img class="d-block mx-auto" src="{{url_for('static', filename= 'images/bb.png')}}">
-    </div>  -->
-    <!-- <nav class="nav bg-dark d-flex text-success justify-content-around">
-        <span class="navbar-brand col-2">
-            <img class="img-fluid-nav" src="{{url_for('static', filename= 'images/bb.png')}}">
-        </span>
-        <a href="{{ url_for('index') }}" class="link-light">Home</a>
-        <a href="{{ url_for('my_investment') }}" class="link-light">My Investments</a>
-
-        {% if current_user.is_authenticated%}
-        <a href="{{ url_for('trade') }}" class="link-light">Add Investment</a>
-        <a href="{{ url_for('logout') }}" class="link-light">Log Out</a>
-        
-        {% else %}
-        <a href="{{ url_for('signup') }}" class="btn btn-primary">Sign Up</a>
-        
-        <a href="{{ url_for('login') }}" class="btn btn-primary link-light">Log In</a>
-        {% endif %}
-    </nav> -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container-fluid">
-            <a href="{{ url_for('index') }}" class="navbar-brand">
-                <img src="{{url_for('static', filename= 'images/bb.png')}}" height="50" alt="CoolBrand">
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="{{ url_for('index') }}" class="nav-item nav-link text-success active">Home</a>
-                    <a href="{{ url_for('news') }}" class="nav-item nav-link text-success active">Live News</a>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <a href="{{ url_for('index') }}" class="navbar-brand">
+                    <img src="{{url_for('static', filename= 'images/bb.png')}}" height="50" alt="CoolBrand">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="{{ url_for('index') }}" class="nav-item nav-link text-success active">Home</a>
+                        <a href="{{ url_for('news') }}" class="nav-item nav-link text-success active">Live News</a>
+                        
+                        <a href="{{ url_for('my_investment') }}" class="nav-item nav-link text-success">My Investments</a>
+                        {% if current_user.is_authenticated%}
+                        <a href="{{ url_for('trade') }}" class="nav-item nav-link text-success">Add Investment</a>
+                        <a href="{{ url_for('logout') }}" class="nav-item nav-link text-success">Log Out</a>
+                    </div>
+            
+                        {% else %}
+                    <div class="navbar-nav ms-auto">
+                        <a href="{{ url_for('signup') }}" class="nav-item nav-link text-success">Signup</a>
+                        <a href="{{ url_for('login') }}" class="nav-item nav-link text-success">Login</a>
+                    </div>
+                        {% endif %}
                     
-                    <a href="{{ url_for('my_investment') }}" class="nav-item nav-link text-success">My Investments</a>
-                    {% if current_user.is_authenticated%}
-                    <a href="{{ url_for('trade') }}" class="nav-item nav-link text-success">Add Investment</a>
-                    <a href="{{ url_for('logout') }}" class="nav-item nav-link text-success">Log Out</a>
                 </div>
-        
-                    {% else %}
-                <div class="navbar-nav ms-auto">
-                    <a href="{{ url_for('signup') }}" class="nav-item nav-link text-success">Signup</a>
-                    <a href="{{ url_for('login') }}" class="nav-item nav-link text-success">Login</a>
-                </div>
-                    {% endif %}
-                
             </div>
-        </div>
-    </nav>              
+        </nav> 
+    </div>             
 
         <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="container-fluid">
