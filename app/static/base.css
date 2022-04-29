@@ -10,6 +10,7 @@ body, html {
     background-color: #2b2b2b;
     color: aqua;
     text-align: center;
+    margin: auto;
 }
 
 .img-fluid-nav{
@@ -24,14 +25,14 @@ body, html {
     align-items: center;
 }
 
-.nav{
+/* .nav{
     display:block;
     color:red;
-    font-size: large; 
+    font-size: large;
 }
+
 .nav ul{
     background-color: #2b2b2b;
-    margin: 0;
     width: 100%;
     padding: 0px;
 }
@@ -44,7 +45,7 @@ body, html {
     border-top:0.01cm solid white;
     border-left:0.01cm solid white;
     border-right:0.01cm solid white;
-}
+} */
 
 .text1{
     color: red;
