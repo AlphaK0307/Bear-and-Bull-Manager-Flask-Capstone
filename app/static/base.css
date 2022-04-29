@@ -11,8 +11,9 @@ body, html {
     text-align: center;
 }
 
-p:hover, h1:hover, a:hover {
-    background-color: rgb(222, 131, 131);
+a:hover {
+    background-color: rgba(189, 48, 48, 0.657);
+    transform: scale(1.3);
   }
 
 .img-fluid-nav{
@@ -98,7 +99,7 @@ p:hover, h1:hover, a:hover {
 .flex-container3 {
     display: flex;
     justify-content: space-around;
-    size: 100px;
+    size: 80px;
     margin-top: 50px;
     margin-bottom: 100px;
 }
@@ -107,6 +108,9 @@ p:hover, h1:hover, a:hover {
     background-color: purple;
     color: white;
     border-radius: 18px;
+    padding: 5%;
+    max-width: 90%;
+    display:inline-flex;
 }
 
 .news{
