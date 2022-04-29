@@ -11,6 +11,10 @@ body, html {
     text-align: center;
 }
 
+p:hover, h1:hover, a:hover {
+    background-color: rgb(222, 131, 131);
+  }
+
 .img-fluid-nav{
     max-height: 90%;
     width: 40%;
